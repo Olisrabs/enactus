@@ -209,89 +209,7 @@
 </head>
 <body>
 <!-- Top Navbar -->
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container-fluid px-lg-5">
-    <!-- Logo -->
-    <a class="navbar-brand" href="index.html">
-      <img src="/assest/logo.png" alt="Enactus" style="width: 100px; height: 80px;">
-    </a>
-
-    <!-- Hamburger toggle (mobile only) -->
-    <button class="btn border-0 mobile-toggle" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Desktop Nav -->
-    <div class="collapse navbar-collapse desktop-nav" style="margin-left: 36%;">
-      <ul class="navbar-nav align-items-center">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About Us</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="who we are.html">- Who We Are</a></li>
-            <li><a class="dropdown-item" href="project.html">- Our Projects</a></li>
-            <li><a class="dropdown-item" href="Team.html">- Our Teams</a></li>
-            <li><a class="dropdown-item disabled" href="#">- Our Alumni</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="national.html">National Competition</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">News & More</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="event&program.html">- Events & Programs</a></li>
-            <li><a class="dropdown-item" href="blog.html">- Blog</a></li>
-            <li><a class="dropdown-item" href="gallery.html">- Gallery</a></li>
-            <li><a class="dropdown-item" href="#">- Login</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Contact Button -->
-    <div class="desktop-nav">
-      <a class="btn btn-enactus ms-auto" href="https://wa.me/2349023032547">Contact Us</a>
-    </div>
-  </div>
-</nav>
-
-<!-- Offcanvas Sidebar (Mobile Only) -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title">Menu</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-  </div>
-  <div class="offcanvas-body">
-    <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link " href="index.html">Home</a></li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" data-bs-toggle="collapse" href="#aboutDropdown">About Us</a>
-        <ul class="collapse list-unstyled ps-3" id="aboutDropdown">
-          <li><a class="nav-link" href="who we are.html">- Who We Are</a></li>
-          <li><a class="nav-link" href="project.html">- Our Project</a></li>
-          <li><a class="nav-link" href="Team.html">- Our Teams</a></li>
-          <li><a class="nav-link disabled" href="#">- Our Alumni</a></li>
-        </ul>
-      </li>
-
-      <li class="nav-item"><a class="nav-link" href="national.html">National Competition</a></li>
-
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle active" data-bs-toggle="collapse" role="button" href="#newsDropdown">News & More</a>
-        <ul class="collapse list-unstyled ps-3" id="newsDropdown">
-          <li><a class="nav-link" href="event&program.html">- Events & Programs</a></li>
-          <li><a class="nav-link" href="blog.html">- Blog</a></li>
-          <li><a class="nav-link" href="gallery.html">- Gallery</a></li>
-          <li><a class="nav-link" href="#">- Login</a></li>
-        </ul>
-      </li>
-
-      <li class="nav-item">
-        <a class="btn btn-enactus w-100" href="https://wa.me/2349023032547">Contact Us</a>
-      </li>
-    </ul>
-  </div>
-</div>
+<?php include 'navbar.php'; ?>
 
 
 <!-- Programs Carousel Section -->
@@ -303,7 +221,7 @@
 
     <!-- Back to Home -->
     <div class="container  mb-4">
-      <a href="index.html" class="text-decoration-none" style="color: #f1c40f;">
+      <a href="index.php" class="text-decoration-none" style="color: #f1c40f;">
         <i class="bi bi-house-door-fill me-2"></i> Back to Home
       </a>
     </div>
@@ -355,70 +273,10 @@
 </section>
 
 <!-- Newsletter Section -->
-<section class="bg-warning text-dark py-5">
-  <div class="container">
-    <h3 class="text-center mb-4">Subscribe to Our Newsletter</h3>
-    <form id="newsletterForm" class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="input-group">
-          <input type="email" class="form-control" placeholder="Enter your email" required>
-          <button class="btn btn-dark" type="submit">Subscribe</button>
-        </div>
-      </div>
-    </form>
-    <div id="newsletterMessage" class="text-center mt-3"></div>
-  </div>
-</section>
+<?php include "newsletter.php" ?>
 
 <!-- Footer -->
-<footer class="bg-dark text-light pt-5 pb-4">
-  <div class="container">
-    <div class="row">
-
-      <!-- Logo / About -->
-      <div class="col-md-4 mb-3">
-        <h4 class="text-warning">Enactus Bouesti</h4>
-        <p>Empowering students to transform lives and create a better, more sustainable world through entrepreneurial action.</p>
-      </div>
-
-      <!-- Quick Links -->
-      <div class="col-md-4 mb-3">
-        <h5 class="text-warning">Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="footer-link">Home</a></li>
-          <li><a href="who we are.html" class="footer-link">About Us</a></li>
-          <li><a href="event&program.html" class="footer-link">Programs</a></li>
-          <li><a href="https://wa.me/2349023032547" class="footer-link">Become a member</a></li>
-        </ul>
-      </div>
-      
-       <!-- Contact Info -->
-      <div class="col-md-3 mb-3">
-        <h5 class="text-warning">Contact Us</h5>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-geo-alt-fill me-2"></i>Igbara Odo Road, P.M.B. 250 Ikere-Ekiti.</li>
-          <li><i class="bi bi-envelope-fill me-2"></i>bouestienactus@gmail.com</li>
-          <li><i class="bi bi-telephone-fill me-2"></i>+234 7038 844 280</li>
-        </ul>
-      </div>
-
-      <!-- Social Media -->
-      <div class="col-md-4 mb-3">
-        <h5 class="text-warning">Follow Us</h5>
-        <a href="https://web.facebook.com/photo/?fbid=122095656044875129&set=a.122095654844875129&__tn__=%3C" class="me-3 text-light fs-4"><i class="bi bi-facebook"></i></a>
-        <a href="https://x.com/EnactusBouesti" class="me-3 text-light fs-4"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.instagram.com/enactus_bouesti/" class="me-3 text-light fs-4"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.linkedin.com/company/enactus-bouesti/posts/?feedView=all" class="text-light fs-4"><i class="bi bi-linkedin"></i></a>
-      </div>
-    </div>
-
-    <hr class="border-light">
-
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 Enactus Bouesti. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+<?php include "footer.php" ?>
 
 
 <!-- Bootstrap JS -->
